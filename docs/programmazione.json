@@ -1,0 +1,111 @@
+{
+  "cinema": "Cinema Odeon Vicenza",
+  "aggiornato_il": "24-07-2026 09:45 UTC",
+  "giorni": [
+    {
+      "data": "venerdì 24 Luglio 2026",
+      "film": [
+        {
+          "titolo": "Odissea – odeon",
+          "orari": [
+            "18:00"
+          ],
+          "versione_originale": true
+        },
+        {
+          "titolo": "Odissea",
+          "orari": [
+            "21:30"
+          ],
+          "versione_originale": true
+        }
+      ]
+    },
+    {
+      "data": "sabato 25 Luglio 2026",
+      "film": [
+        {
+          "titolo": "Odissea – odeon",
+          "orari": [
+            "18:00"
+          ],
+          "versione_originale": true
+        },
+        {
+          "titolo": "Odissea",
+          "orari": [
+            "21:30"
+          ],
+          "versione_originale": true
+        }
+      ]
+    },
+    {
+      "data": "domenica 26 Luglio 2026",
+      "film": [
+        {
+          "titolo": "Odissea – odeon",
+          "orari": [
+            "18:00"
+          ],
+          "versione_originale": true
+        },
+        {
+          "titolo": "Odissea",
+          "orari": [
+            "21:30"
+          ],
+          "versione_originale": true
+        }
+      ]
+    },
+    {
+      "data": "lunedì 27 Luglio 2026",
+      "film": [
+        {
+          "titolo": "Io non ti lascio solo",
+          "orari": [
+            "21:30"
+          ],
+          "versione_originale": true
+        }
+      ]
+    },
+    {
+      "data": "martedì 28 Luglio 2026",
+      "film": [
+        {
+          "titolo": "Kontinetal ’25 – v.o.",
+          "orari": [
+            "21:30"
+          ],
+          "versione_originale": true
+        }
+      ]
+    },
+    {
+      "data": "mercoledì 29 Luglio 2026",
+      "film": [
+        {
+          "titolo": "Bianca",
+          "orari": [
+            "21:30"
+          ],
+          "versione_originale": true
+        }
+      ]
+    },
+    {
+      "data": "giovedì 30 Luglio 2026",
+      "film": [
+        {
+          "titolo": "L’agente segreto (o agente secreto)",
+          "orari": [
+            "21:30"
+          ],
+          "versione_originale": true
+        }
+      ]
+    }
+  ]
+}
