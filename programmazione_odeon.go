@@ -100,9 +100,10 @@ func htmlToText(raw string) string {
 
 // Film rappresenta una proiezione trovata per la data richiesta.
 type Film struct {
-	Titolo string   `json:"titolo"`
-	Orari  []string `json:"orari"`
-	VO     bool     `json:"versione_originale"`
+	Titolo        string   `json:"titolo"`
+	Orari         []string `json:"orari"`
+	VO            bool     `json:"versione_originale"`
+	SottoLeStelle bool     `json:"cinema_sotto_le_stelle"`
 }
 
 // GiornoProgrammazione raggruppa i film di una singola giornata,
@@ -130,7 +131,12 @@ func estraiFilmData(text, targetDate string) []Film {
 	spazi := regexp.MustCompile(`\s+`)
 
 	var risultati []Film
-	for _, block := range blocks[1:] { // il primo blocco è prima di ogni titolo: si scarta
+	for idx := 1; idx < len(blocks); idx++ { // il blocco 0 è prima di ogni titolo: si scarta
+		block := blocks[idx]
+		// La categoria del film (es. "Cinema sotto le stelle") compare nell'HTML
+		// subito prima del titolo, quindi finisce in coda al blocco precedente.
+		sottoLeStelle := strings.Contains(strings.ToLower(ultimiCaratteri(blocks[idx-1], 200)), "cinema sotto le stelle")
+
 		lines := strings.Split(block, "\n")
 		var titolo string
 		for _, l := range lines {
@@ -175,10 +181,20 @@ func estraiFilmData(text, targetDate string) []Film {
 		}
 
 		if trovato {
-			risultati = append(risultati, Film{Titolo: titolo, Orari: orari, VO: vo})
+			risultati = append(risultati, Film{Titolo: titolo, Orari: orari, VO: vo, SottoLeStelle: sottoLeStelle})
 		}
 	}
 	return risultati
+}
+
+// ultimiCaratteri restituisce gli ultimi n rune di s (o l'intera stringa se
+// più corta), utile per ispezionare solo la coda di un blocco di testo.
+func ultimiCaratteri(s string, n int) string {
+	r := []rune(s)
+	if len(r) <= n {
+		return s
+	}
+	return string(r[len(r)-n:])
 }
 
 // ordinaFilm ordina i film per orario di inizio crescente.
@@ -209,11 +225,15 @@ func stampaGiorno(dateStr string, film []Film) {
 		if f.VO {
 			vo = "  [V.O.]"
 		}
+		stelle := ""
+		if f.SottoLeStelle {
+			stelle = "  [🌟 Sotto le stelle]"
+		}
 		orari := "orario da confermare (contatta il cinema)"
 		if len(f.Orari) > 0 {
 			orari = strings.Join(f.Orari, ", ")
 		}
-		fmt.Printf("  • %s%s — 🕒 %s\n", f.Titolo, vo, orari)
+		fmt.Printf("  • %s%s%s — 🕒 %s\n", f.Titolo, vo, stelle, orari)
 	}
 	fmt.Println()
 }
@@ -301,10 +321,14 @@ func costruisciJSONLD(prog Programmazione, titoloPagina, descrizione string) (te
 					continue
 				}
 				inizio := time.Date(data.Year(), data.Month(), data.Day(), ore, minuti, 0, 0, loc)
-				descrizioneEvento := ""
+				var noteEvento []string
 				if f.VO {
-					descrizioneEvento = "Proiezione in versione originale."
+					noteEvento = append(noteEvento, "Proiezione in versione originale.")
 				}
+				if f.SottoLeStelle {
+					noteEvento = append(noteEvento, "Rassegna Cinema sotto le stelle.")
+				}
+				descrizioneEvento := strings.Join(noteEvento, " ")
 				graph = append(graph, jsonLDScreeningEvent{
 					Type:      "ScreeningEvent",
 					StartDate: inizio.Format(time.RFC3339),
@@ -366,6 +390,7 @@ const paginaHTMLTemplate = `<!DOCTYPE html>
   .film { padding: 0.4rem 0; border-bottom: 1px solid #f2f2f2; }
   .titolo { font-weight: 600; }
   .vo { color: #b34700; font-size: 0.8rem; }
+  .stelle { color: #1a5276; font-size: 0.8rem; }
   .orari { color: #333; }
   .vuoto { color: #999; font-style: italic; }
 </style>
@@ -381,6 +406,7 @@ const paginaHTMLTemplate = `<!DOCTYPE html>
       <div class="film">
         <span class="titolo">{{.Titolo}}</span>
         {{if .VO}}<span class="vo">[V.O.]</span>{{end}}
+        {{if .SottoLeStelle}}<span class="stelle">🌟 Sotto le stelle</span>{{end}}
         <div class="orari">🕒 {{if .Orari}}{{range $i, $o := .Orari}}{{if $i}}, {{end}}{{$o}}{{end}}{{else}}orario da confermare{{end}}</div>
       </div>
       {{end}}
