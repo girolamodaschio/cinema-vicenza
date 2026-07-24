@@ -38,6 +38,22 @@ go run programmazione_odeon.go -settimana \
   `https://girolamodaschio.github.io/cinema-vicenza/` (HTML)
   `https://girolamodaschio.github.io/cinema-vicenza/programmazione.json` (JSON)
 
+## SEO / indicizzazione
+
+La pagina HTML generata (`docs/index.html`) include, in modo invisibile
+all'utente (solo nel `<head>` e in un tag `<script type="application/ld+json">`):
+
+- `<title>` e `<meta name="description">` dinamici con le date della settimana
+- tag Open Graph e Twitter Card
+- `<link rel="canonical">` verso l'URL pubblico su GitHub Pages
+- dati strutturati schema.org (`WebPage` + `ScreeningEvent` per ogni film/orario),
+  lo standard che Google e gli assistenti AI usano per capire orari di
+  proiezione dei cinema
+
+Vengono generati anche `docs/robots.txt` e `docs/sitemap.xml` per favorire la
+scansione da parte dei motori di ricerca. L'aspetto visivo della pagina non
+cambia.
+
 ## Note
 
 - Nessuna dipendenza esterna: solo standard library di Go.

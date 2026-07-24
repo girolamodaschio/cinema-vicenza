@@ -32,6 +32,7 @@ import (
 )
 
 const programmazioneURL = "https://www.odeonline.it/programmazione/"
+const sitoPubblicoURL = "https://girolamodaschio.github.io/cinema-vicenza/"
 
 var giorniSettimana = []string{"domenica", "lunedì", "martedì", "mercoledì", "giovedì", "venerdì", "sabato"}
 var mesi = []string{"", "Gennaio", "Febbraio", "Marzo", "Aprile", "Maggio", "Giugno",
@@ -41,6 +42,12 @@ var mesi = []string{"", "Gennaio", "Febbraio", "Marzo", "Aprile", "Maggio", "Giu
 // es. "venerdì 24 Luglio 2026".
 func italianDateString(t time.Time) string {
 	return fmt.Sprintf("%s %d %s %d", giorniSettimana[int(t.Weekday())], t.Day(), mesi[int(t.Month())], t.Year())
+}
+
+// italianDateShort restituisce una data compatta senza giorno della
+// settimana, usata per titoli/meta tag (es. "24 Luglio").
+func italianDateShort(t time.Time) string {
+	return fmt.Sprintf("%d %s", t.Day(), mesi[int(t.Month())])
 }
 
 func fetchHTML(url string) (string, error) {
@@ -101,8 +108,9 @@ type Film struct {
 // GiornoProgrammazione raggruppa i film di una singola giornata,
 // usato per l'export in JSON/HTML.
 type GiornoProgrammazione struct {
-	Data string `json:"data"`
-	Film []Film `json:"film"`
+	Data    string `json:"data"`
+	DataISO string `json:"data_iso"`
+	Film    []Film `json:"film"`
 }
 
 // Programmazione è la struttura completa esportata in JSON.
@@ -210,12 +218,145 @@ func stampaGiorno(dateStr string, film []Film) {
 	fmt.Println()
 }
 
+// --- Dati strutturati schema.org (JSON-LD), non visibili nella pagina ma
+// letti da motori di ricerca e assistenti AI per capire cosa mostra il sito. ---
+
+type jsonLDAddress struct {
+	Type            string `json:"@type"`
+	AddressLocality string `json:"addressLocality"`
+	AddressCountry  string `json:"addressCountry"`
+}
+
+type jsonLDMovieTheater struct {
+	Type    string        `json:"@type"`
+	Name    string        `json:"name"`
+	Address jsonLDAddress `json:"address"`
+}
+
+type jsonLDMovie struct {
+	Type string `json:"@type"`
+	Name string `json:"name"`
+}
+
+type jsonLDScreeningEvent struct {
+	Type          string             `json:"@type"`
+	StartDate     string             `json:"startDate"`
+	WorkPresented jsonLDMovie        `json:"workPresented"`
+	Location      jsonLDMovieTheater `json:"location"`
+	URL           string             `json:"url"`
+	Description   string             `json:"description,omitempty"`
+}
+
+type jsonLDWebPage struct {
+	Type        string `json:"@type"`
+	Name        string `json:"name"`
+	Description string `json:"description"`
+	URL         string `json:"url"`
+	InLanguage  string `json:"inLanguage"`
+}
+
+type jsonLDGraph struct {
+	Context string        `json:"@context"`
+	Graph   []interface{} `json:"@graph"`
+}
+
+// costruisciJSONLD genera il markup schema.org (WebPage + ScreeningEvent per
+// ogni spettacolo con orario noto), da incorporare in un tag <script
+// type="application/ld+json"> nella pagina HTML.
+func costruisciJSONLD(prog Programmazione, titoloPagina, descrizione string) (template.JS, error) {
+	loc, err := time.LoadLocation("Europe/Rome")
+	if err != nil {
+		loc = time.UTC
+	}
+
+	teatro := jsonLDMovieTheater{
+		Type: "MovieTheater",
+		Name: prog.Cinema,
+		Address: jsonLDAddress{
+			Type:            "PostalAddress",
+			AddressLocality: "Vicenza",
+			AddressCountry:  "IT",
+		},
+	}
+
+	graph := []interface{}{
+		jsonLDWebPage{
+			Type:        "WebPage",
+			Name:        titoloPagina,
+			Description: descrizione,
+			URL:         sitoPubblicoURL,
+			InLanguage:  "it",
+		},
+	}
+
+	for _, giorno := range prog.Giorni {
+		data, err := time.ParseInLocation("2006-01-02", giorno.DataISO, loc)
+		if err != nil {
+			continue
+		}
+		for _, f := range giorno.Film {
+			for _, orario := range f.Orari {
+				var ore, minuti int
+				if _, err := fmt.Sscanf(orario, "%d:%d", &ore, &minuti); err != nil {
+					continue
+				}
+				inizio := time.Date(data.Year(), data.Month(), data.Day(), ore, minuti, 0, 0, loc)
+				descrizioneEvento := ""
+				if f.VO {
+					descrizioneEvento = "Proiezione in versione originale."
+				}
+				graph = append(graph, jsonLDScreeningEvent{
+					Type:      "ScreeningEvent",
+					StartDate: inizio.Format(time.RFC3339),
+					WorkPresented: jsonLDMovie{
+						Type: "Movie",
+						Name: f.Titolo,
+					},
+					Location:    teatro,
+					URL:         sitoPubblicoURL,
+					Description: descrizioneEvento,
+				})
+			}
+		}
+	}
+
+	dati := jsonLDGraph{Context: "https://schema.org", Graph: graph}
+	b, err := json.Marshal(dati)
+	if err != nil {
+		return "", err
+	}
+	return template.JS(b), nil
+}
+
+// paginaData estende Programmazione con i campi usati solo per SEO/AEO nella
+// pagina HTML (non fanno parte del JSON pubblico esportato separatamente).
+type paginaData struct {
+	Programmazione
+	TitoloPagina string
+	Descrizione  string
+	URLPagina    string
+	JSONLD       template.JS
+}
+
 const paginaHTMLTemplate = `<!DOCTYPE html>
 <html lang="it">
 <head>
 <meta charset="UTF-8">
-<title>Programmazione Cinema Odeon Vicenza</title>
+<title>{{.TitoloPagina}}</title>
+<meta name="description" content="{{.Descrizione}}">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="{{.URLPagina}}">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="{{.Cinema}}">
+<meta property="og:title" content="{{.TitoloPagina}}">
+<meta property="og:description" content="{{.Descrizione}}">
+<meta property="og:url" content="{{.URLPagina}}">
+<meta property="og:locale" content="it_IT">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="{{.TitoloPagina}}">
+<meta name="twitter:description" content="{{.Descrizione}}">
+<script type="application/ld+json">{{.JSONLD}}</script>
 <style>
   body { font-family: -apple-system, Helvetica, Arial, sans-serif; max-width: 720px; margin: 2rem auto; padding: 0 1rem; color: #1a1a1a; }
   h1 { font-size: 1.4rem; }
@@ -263,7 +404,7 @@ func scriviJSON(percorso string, prog Programmazione) error {
 	return os.WriteFile(percorso, data, 0644)
 }
 
-func scriviHTML(percorso string, prog Programmazione) error {
+func scriviHTML(percorso string, dati paginaData) error {
 	if err := os.MkdirAll(filepath.Dir(percorso), 0755); err != nil && filepath.Dir(percorso) != "." {
 		return err
 	}
@@ -276,7 +417,29 @@ func scriviHTML(percorso string, prog Programmazione) error {
 		return err
 	}
 	defer f.Close()
-	return tmpl.Execute(f, prog)
+	return tmpl.Execute(f, dati)
+}
+
+// scriviRobotsESitemap scrive robots.txt e sitemap.xml nella stessa cartella
+// della pagina HTML, per favorire l'indicizzazione da parte dei motori di
+// ricerca.
+func scriviRobotsESitemap(cartella string) error {
+	robots := fmt.Sprintf("User-agent: *\nAllow: /\n\nSitemap: %ssitemap.xml\n", sitoPubblicoURL)
+	if err := os.WriteFile(filepath.Join(cartella, "robots.txt"), []byte(robots), 0644); err != nil {
+		return err
+	}
+
+	sitemap := fmt.Sprintf(`<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>%s</loc>
+    <lastmod>%s</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+</urlset>
+`, sitoPubblicoURL, time.Now().Format("2006-01-02"))
+	return os.WriteFile(filepath.Join(cartella, "sitemap.xml"), []byte(sitemap), 0644)
 }
 
 func main() {
@@ -314,7 +477,11 @@ func main() {
 		dateStr := italianDateString(giorno)
 		film := estraiFilmData(text, dateStr)
 		ordinaFilm(film)
-		giorni = append(giorni, GiornoProgrammazione{Data: dateStr, Film: film})
+		giorni = append(giorni, GiornoProgrammazione{
+			Data:    dateStr,
+			DataISO: giorno.Format("2006-01-02"),
+			Film:    film,
+		})
 	}
 
 	prog := Programmazione{
@@ -342,10 +509,44 @@ func main() {
 		fmt.Println("✅ JSON scritto in:", *flagOut)
 	}
 	if *flagHTMLOut != "" {
-		if err := scriviHTML(*flagHTMLOut, prog); err != nil {
+		var titoloPagina, descrizione string
+		if *flagSettimana {
+			titoloPagina = fmt.Sprintf("Programmazione Cinema Odeon Vicenza – %s / %s",
+				italianDateShort(target), italianDateShort(target.AddDate(0, 0, numGiorni-1)))
+			descrizione = fmt.Sprintf(
+				"Film e orari degli spettacoli al Cinema Odeon di Vicenza per la settimana dal %s al %s. Aggiornato il %s.",
+				italianDateShort(target), italianDateShort(target.AddDate(0, 0, numGiorni-1)), prog.AggiornatoIl)
+		} else {
+			titoloPagina = fmt.Sprintf("Programmazione Cinema Odeon Vicenza – %s", italianDateShort(target))
+			descrizione = fmt.Sprintf(
+				"Film e orari degli spettacoli al Cinema Odeon di Vicenza per %s. Aggiornato il %s.",
+				giorni[0].Data, prog.AggiornatoIl)
+		}
+
+		jsonLD, err := costruisciJSONLD(prog, titoloPagina, descrizione)
+		if err != nil {
+			fmt.Println("Errore nella generazione dei dati strutturati:", err)
+			os.Exit(1)
+		}
+
+		dati := paginaData{
+			Programmazione: prog,
+			TitoloPagina:    titoloPagina,
+			Descrizione:     descrizione,
+			URLPagina:       sitoPubblicoURL,
+			JSONLD:          jsonLD,
+		}
+
+		if err := scriviHTML(*flagHTMLOut, dati); err != nil {
 			fmt.Println("Errore nella scrittura del file HTML:", err)
 			os.Exit(1)
 		}
 		fmt.Println("✅ HTML scritto in:", *flagHTMLOut)
+
+		if err := scriviRobotsESitemap(filepath.Dir(*flagHTMLOut)); err != nil {
+			fmt.Println("Errore nella scrittura di robots.txt/sitemap.xml:", err)
+			os.Exit(1)
+		}
+		fmt.Println("✅ robots.txt e sitemap.xml scritti in:", filepath.Dir(*flagHTMLOut))
 	}
 }
