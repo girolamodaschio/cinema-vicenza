@@ -1,65 +1,8 @@
-# Programmazione Cinema Odeon Vicenza
+# Cinema Odeon Vicenza
 
-Script Go (senza dipendenze esterne) che recupera la programmazione dal sito
-ufficiale del Cinema Odeon di Vicenza (https://www.odeonline.it/programmazione/)
-e la esporta in JSON e/o HTML. Pensato per girare come GitHub Action settimanale
-(ogni giovedì, quando l'Odeon aggiorna la programmazione) e pubblicare i
-risultati su GitHub Pages / raw.githubusercontent.com.
+repo ai generated per avere la programmazione del mio cinema preferito in un formato facilmente leggibile da uomo e macchina.
 
-## Uso locale
+al link https://girolamodaschio.github.io/cinema-vicenza/
+trovi, ogni settimana, l'output dello scraper scritto in go.
 
-```bash
-go run programmazione_odeon.go                          # oggi, stampa a schermo
-go run programmazione_odeon.go -data 25-07-2026          # una data specifica
-go run programmazione_odeon.go -settimana                # prossimi 7 giorni
-go run programmazione_odeon.go -settimana \
-    -out docs/programmazione.json -html docs/index.html  # esporta su file
-```
-
-## Setup GitHub Actions (automatico, settimanale)
-
-1. Fai push di questo repo su GitHub (repo pubblico se vuoi l'URL pubblico gratis).
-2. Il workflow `.github/workflows/aggiorna-programmazione.yml` è già pronto:
-   gira ogni giovedì alle 06:00 UTC (giorno in cui l'Odeon aggiorna la
-   programmazione settimanale) e può anche essere avviato a mano da
-   **Actions → Aggiorna programmazione Odeon Vicenza → Run workflow**.
-   Scrive `docs/programmazione.json` e `docs/index.html`, e fa commit/push
-   automatico solo se qualcosa è cambiato.
-
-## Ottenere l'URL pubblico
-
-- **JSON grezzo, zero configurazione:**
-  `https://raw.githubusercontent.com/girolamodaschio/cinema-vicenza/main/docs/programmazione.json`
-  (funziona subito dopo la prima esecuzione del workflow)
-
-- **Pagina HTML leggibile (GitHub Pages):**
-  Settings → Pages → Source: *Deploy from branch*, branch `main`, cartella `/docs`.
-  Dopo un paio di minuti:
-  `https://girolamodaschio.github.io/cinema-vicenza/` (HTML)
-  `https://girolamodaschio.github.io/cinema-vicenza/programmazione.json` (JSON)
-
-## SEO / indicizzazione
-
-La pagina HTML generata (`docs/index.html`) include, in modo invisibile
-all'utente (solo nel `<head>` e in un tag `<script type="application/ld+json">`):
-
-- `<title>` e `<meta name="description">` dinamici con le date della settimana
-- tag Open Graph e Twitter Card
-- `<link rel="canonical">` verso l'URL pubblico su GitHub Pages
-- dati strutturati schema.org (`WebPage` + `ScreeningEvent` per ogni film/orario),
-  lo standard che Google e gli assistenti AI usano per capire orari di
-  proiezione dei cinema
-
-Vengono generati anche `docs/robots.txt` e `docs/sitemap.xml` per favorire la
-scansione da parte dei motori di ricerca. L'aspetto visivo della pagina non
-cambia.
-
-## Note
-
-- Nessuna dipendenza esterna: solo standard library di Go.
-- Lo script fa scraping testuale dell'HTML (indipendente dalle classi CSS del
-  tema), cercando le date in formato italiano ("venerdì 24 Luglio 2026") e gli
-  orari (`HH:MM`) associati. Se il sito cambia radicalmente struttura, potrebbe
-  essere necessario aggiornare le regex in `estraiFilmData` / `htmlToText`.
-- Un'esecuzione a settimana è sufficiente e rispettosa verso il sito sorgente,
-  dato che l'Odeon pubblica la programmazione con cadenza settimanale.
+cheera
