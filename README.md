@@ -1,4 +1,4 @@
-# Cinema Odeon Vicenza
+# Cinema Vicenza
 
 repo ai generated per avere la programmazione del mio cinema preferito in un formato facilmente leggibile da uomo e macchina.
 
