@@ -1,0 +1,35 @@
+name: Diagnostica struttura siti (temporaneo)
+
+on:
+  workflow_dispatch: {}
+
+jobs:
+  diagnostica:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Verifica struttura HTML dei siti
+        run: |
+          check() {
+            url="$1"
+            echo "=================================================="
+            echo "URL: $url"
+            code=$(curl -sL -o /tmp/body.html -D /tmp/headers.txt -w "%{http_code}" \
+              -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" \
+              -H "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8" \
+              -H "Accept-Language: it-IT,it;q=0.9,en;q=0.8" \
+              --max-time 20 "$url" || echo "CURL_ERROR")
+            echo "HTTP status: $code"
+            echo "Dimensione body: $(wc -c < /tmp/body.html) bytes"
+            echo "--- Titoli h1-h6 trovati (con contesto) ---"
+            grep -oE '<h[1-6][^>]*>.{0,80}' /tmp/body.html | head -20
+            echo "--- Pattern data italiana (giorno + numero + mese) ---"
+            grep -oiE '(lunedi|luned&igrave;|lunedì|martedi|martedì|mercoledi|mercoledì|gioved|venerd|sabato|domenica)[^<]{0,40}' /tmp/body.html | head -10
+            echo "--- Pattern orari HH:MM ---"
+            grep -oE '[0-9]{1,2}:[0-9]{2}' /tmp/body.html | sort | uniq -c | sort -rn | head -10
+            echo "--- HTML grezzo primi 2000 caratteri ---"
+            head -c 2000 /tmp/body.html
+            echo ""
+            echo ""
+          }
+          check "https://spazio-roma.it/cinema/"
+          check "https://www.araceli.it/cinema/"
