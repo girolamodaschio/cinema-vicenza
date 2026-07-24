@@ -1,0 +1,32 @@
+name: Diagnostica struttura siti (temporaneo)
+
+on:
+  workflow_dispatch: {}
+
+jobs:
+  diagnostica:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Cerca "sotto le stelle" nella programmazione Odeon
+        run: |
+          set +e
+          curl -sL -o /tmp/odeon.html \
+            -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" \
+            -H "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8" \
+            -H "Accept-Language: it-IT,it;q=0.9,en;q=0.8" \
+            --max-time 20 "https://www.odeonline.it/programmazione/"
+          size=$(wc -c < /tmp/odeon.html)
+          echo "Dimensione: $size bytes"
+          echo "--- occorrenze di 'stelle' con contesto HTML grezzo (500 caratteri prima e dopo, ogni occorrenza) ---"
+          python3 - <<'EOF'
+          import re
+          data = open('/tmp/odeon.html', encoding='utf-8', errors='replace').read()
+          positions = [m.start() for m in re.finditer(r'stelle', data, re.IGNORECASE)]
+          print(f"Trovate {len(positions)} occorrenze")
+          for i, p in enumerate(positions):
+              start = max(0, p-500)
+              end = min(len(data), p+500)
+              print(f"\n=== Occorrenza {i+1} (posizione {p}) ===")
+              print(data[start:end])
+          EOF
+          exit 0
