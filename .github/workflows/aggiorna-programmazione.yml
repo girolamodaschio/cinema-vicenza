@@ -32,6 +32,6 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add docs/programmazione.json docs/index.html
+          git add docs/programmazione.json docs/index.html docs/robots.txt docs/sitemap.xml
           git diff --staged --quiet || git commit -m "Aggiorna programmazione $(date -u +'%Y-%m-%d %H:%M UTC')"
           git push
