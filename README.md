@@ -9,20 +9,20 @@ risultati su GitHub Pages / raw.githubusercontent.com.
 ## Uso locale
 
 ```bash
-go run programmazione_odeon.go                          # oggi, stampa a schermo
-go run programmazione_odeon.go -data 25-07-2026          # una data specifica
-go run programmazione_odeon.go -settimana                # prossimi 7 giorni
-go run programmazione_odeon.go -settimana \
+go run main.go                                  # oggi, stampa a schermo
+go run main.go -date 25-07-2026                  # una data specifica
+go run main.go -week                             # prossimi 7 giorni
+go run main.go -week \
     -out docs/programmazione.json -html docs/index.html  # esporta su file
 ```
 
 ## Setup GitHub Actions (automatico, settimanale)
 
 1. Fai push di questo repo su GitHub (repo pubblico se vuoi l'URL pubblico gratis).
-2. Il workflow `.github/workflows/aggiorna-programmazione.yml` è già pronto:
+2. Il workflow `.github/workflows/update-schedule.yml` è già pronto:
    gira ogni giovedì alle 06:00 UTC (giorno in cui l'Odeon aggiorna la
    programmazione settimanale) e può anche essere avviato a mano da
-   **Actions → Aggiorna programmazione Odeon Vicenza → Run workflow**.
+   **Actions → Update Odeon Vicenza schedule → Run workflow**.
    Scrive `docs/programmazione.json` e `docs/index.html`, e fa commit/push
    automatico solo se qualcosa è cambiato.
 
@@ -60,6 +60,6 @@ cambia.
 - Lo script fa scraping testuale dell'HTML (indipendente dalle classi CSS del
   tema), cercando le date in formato italiano ("venerdì 24 Luglio 2026") e gli
   orari (`HH:MM`) associati. Se il sito cambia radicalmente struttura, potrebbe
-  essere necessario aggiornare le regex in `estraiFilmData` / `htmlToText`.
+  essere necessario aggiornare le regex in `extractFilmData` / `htmlToText`.
 - Un'esecuzione a settimana è sufficiente e rispettosa verso il sito sorgente,
   dato che l'Odeon pubblica la programmazione con cadenza settimanale.
