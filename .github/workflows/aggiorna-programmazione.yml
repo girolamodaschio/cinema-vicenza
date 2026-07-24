@@ -2,8 +2,9 @@ name: Aggiorna programmazione Odeon Vicenza
 
 on:
   schedule:
-    # Ogni giorno alle 06:00 UTC (~08:00 ora italiana in inverno, 07:00 in estate legale)
-    - cron: '0 6 * * *'
+    # Ogni giovedì alle 06:00 UTC (~08:00 ora italiana in inverno, 07:00 in estate legale),
+    # giorno in cui l'Odeon aggiorna la programmazione settimanale
+    - cron: '0 6 * * 4'
   workflow_dispatch: {}   # permette anche l'avvio manuale da GitHub
 
 permissions:
