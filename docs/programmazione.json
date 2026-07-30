@@ -1,126 +1,134 @@
 {
   "cinema": "Cinema Odeon Vicenza",
-  "aggiornato_il": "24-07-2026 10:36 UTC",
-  "giorni": [
+  "updated_at": "30-07-2026 08:27 UTC",
+  "days": [
     {
-      "data": "venerdì 24 Luglio 2026",
-      "data_iso": "2026-07-24",
-      "film": [
+      "date": "giovedì 30 Luglio 2026",
+      "date_iso": "2026-07-30",
+      "films": [
         {
-          "titolo": "Odissea – odeon",
-          "orari": [
-            "18:00"
+          "title": "Odissea – odeon",
+          "showtimes": [
+            "20:30"
           ],
-          "versione_originale": true,
-          "cinema_sotto_le_stelle": false
+          "original_version": true,
+          "outdoor_screening": false
         },
         {
-          "titolo": "Odissea",
-          "orari": [
+          "title": "L’agente segreto (o agente secreto)",
+          "showtimes": [
             "21:30"
           ],
-          "versione_originale": true,
-          "cinema_sotto_le_stelle": true
+          "original_version": true,
+          "outdoor_screening": true
         }
       ]
     },
     {
-      "data": "sabato 25 Luglio 2026",
-      "data_iso": "2026-07-25",
-      "film": [
+      "date": "venerdì 31 Luglio 2026",
+      "date_iso": "2026-07-31",
+      "films": [
         {
-          "titolo": "Odissea – odeon",
-          "orari": [
+          "title": "Odissea – odeon",
+          "showtimes": [
             "18:00"
           ],
-          "versione_originale": true,
-          "cinema_sotto_le_stelle": false
+          "original_version": true,
+          "outdoor_screening": false
         },
         {
-          "titolo": "Odissea",
-          "orari": [
+          "title": "Odissea",
+          "showtimes": [
             "21:30"
           ],
-          "versione_originale": true,
-          "cinema_sotto_le_stelle": true
+          "original_version": true,
+          "outdoor_screening": true
         }
       ]
     },
     {
-      "data": "domenica 26 Luglio 2026",
-      "data_iso": "2026-07-26",
-      "film": [
+      "date": "sabato 1 Agosto 2026",
+      "date_iso": "2026-08-01",
+      "films": [
         {
-          "titolo": "Odissea – odeon",
-          "orari": [
+          "title": "Odissea – odeon",
+          "showtimes": [
             "18:00"
           ],
-          "versione_originale": true,
-          "cinema_sotto_le_stelle": false
+          "original_version": true,
+          "outdoor_screening": false
         },
         {
-          "titolo": "Odissea",
-          "orari": [
-            "21:30"
+          "title": "Odissea",
+          "showtimes": [
+            "21:00"
           ],
-          "versione_originale": true,
-          "cinema_sotto_le_stelle": true
+          "original_version": true,
+          "outdoor_screening": true
         }
       ]
     },
     {
-      "data": "lunedì 27 Luglio 2026",
-      "data_iso": "2026-07-27",
-      "film": [
+      "date": "domenica 2 Agosto 2026",
+      "date_iso": "2026-08-02",
+      "films": [
         {
-          "titolo": "Io non ti lascio solo",
-          "orari": [
-            "21:30"
+          "title": "Odissea – odeon",
+          "showtimes": [
+            "18:00"
           ],
-          "versione_originale": true,
-          "cinema_sotto_le_stelle": false
+          "original_version": true,
+          "outdoor_screening": false
+        },
+        {
+          "title": "Gli occhi degli altri (the eyes of others)",
+          "showtimes": [
+            "21:00"
+          ],
+          "original_version": true,
+          "outdoor_screening": true
         }
       ]
     },
     {
-      "data": "martedì 28 Luglio 2026",
-      "data_iso": "2026-07-28",
-      "film": [
+      "date": "lunedì 3 Agosto 2026",
+      "date_iso": "2026-08-03",
+      "films": [
         {
-          "titolo": "Kontinetal ’25 – v.o.",
-          "orari": [
-            "21:30"
+          "title": "Vittorio de sica – la vita in scena",
+          "showtimes": [
+            "21:00"
           ],
-          "versione_originale": true,
-          "cinema_sotto_le_stelle": true
+          "original_version": true,
+          "outdoor_screening": true
         }
       ]
     },
     {
-      "data": "mercoledì 29 Luglio 2026",
-      "data_iso": "2026-07-29",
-      "film": [
+      "date": "martedì 4 Agosto 2026",
+      "date_iso": "2026-08-04",
+      "films": [
         {
-          "titolo": "Bianca",
-          "orari": [
-            "21:30"
+          "title": "L’hangar rosso",
+          "showtimes": [
+            "21:00"
           ],
-          "versione_originale": true,
-          "cinema_sotto_le_stelle": true
+          "original_version": true,
+          "outdoor_screening": true
         }
       ]
     },
     {
-      "data": "giovedì 30 Luglio 2026",
-      "data_iso": "2026-07-30",
-      "film": [
+      "date": "mercoledì 5 Agosto 2026",
+      "date_iso": "2026-08-05",
+      "films": [
         {
-          "titolo": "L’agente segreto (o agente secreto)",
-          "orari": [
-            "21:30"
+          "title": "The doors 4k (ried. 2026)",
+          "showtimes": [
+            "21:00"
           ],
-          "versione_originale": true,
-          "cinema_sotto_le_stelle": true
+          "original_version": true,
+          "outdoor_screening": true
         }
       ]
     }
