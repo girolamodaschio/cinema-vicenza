@@ -1,10 +1,33 @@
 {
   "cinema": "Cinema Odeon Vicenza",
-  "updated_at": "30-07-2026 08:27 UTC",
+  "updated_at": "06-08-2026 08:36 UTC",
   "days": [
     {
-      "date": "giovedì 30 Luglio 2026",
-      "date_iso": "2026-07-30",
+      "date": "giovedì 6 Agosto 2026",
+      "date_iso": "2026-08-06",
+      "films": [
+        {
+          "title": "Odissea – odeon",
+          "showtimes": [
+            "17:30",
+            "20:30"
+          ],
+          "original_version": true,
+          "outdoor_screening": false
+        },
+        {
+          "title": "Election day",
+          "showtimes": [
+            "21:00"
+          ],
+          "original_version": true,
+          "outdoor_screening": true
+        }
+      ]
+    },
+    {
+      "date": "venerdì 7 Agosto 2026",
+      "date_iso": "2026-08-07",
       "films": [
         {
           "title": "Odissea – odeon",
@@ -15,9 +38,9 @@
           "outdoor_screening": false
         },
         {
-          "title": "L’agente segreto (o agente secreto)",
+          "title": "Il diavolo veste prada 2 (the devil wears prada 2)",
           "showtimes": [
-            "21:30"
+            "21:00"
           ],
           "original_version": true,
           "outdoor_screening": true
@@ -25,21 +48,21 @@
       ]
     },
     {
-      "date": "venerdì 31 Luglio 2026",
-      "date_iso": "2026-07-31",
+      "date": "sabato 8 Agosto 2026",
+      "date_iso": "2026-08-08",
       "films": [
         {
           "title": "Odissea – odeon",
           "showtimes": [
-            "18:00"
+            "20:30"
           ],
           "original_version": true,
           "outdoor_screening": false
         },
         {
-          "title": "Odissea",
+          "title": "Toy story 5",
           "showtimes": [
-            "21:30"
+            "21:00"
           ],
           "original_version": true,
           "outdoor_screening": true
@@ -47,19 +70,19 @@
       ]
     },
     {
-      "date": "sabato 1 Agosto 2026",
-      "date_iso": "2026-08-01",
+      "date": "domenica 9 Agosto 2026",
+      "date_iso": "2026-08-09",
       "films": [
         {
           "title": "Odissea – odeon",
           "showtimes": [
-            "18:00"
+            "20:30"
           ],
           "original_version": true,
           "outdoor_screening": false
         },
         {
-          "title": "Odissea",
+          "title": "Che dio perdona a tutti",
           "showtimes": [
             "21:00"
           ],
@@ -69,19 +92,11 @@
       ]
     },
     {
-      "date": "domenica 2 Agosto 2026",
-      "date_iso": "2026-08-02",
+      "date": "lunedì 10 Agosto 2026",
+      "date_iso": "2026-08-10",
       "films": [
         {
-          "title": "Odissea – odeon",
-          "showtimes": [
-            "18:00"
-          ],
-          "original_version": true,
-          "outdoor_screening": false
-        },
-        {
-          "title": "Gli occhi degli altri (the eyes of others)",
+          "title": "The lunch – a letter to america – v.o.",
           "showtimes": [
             "21:00"
           ],
@@ -91,11 +106,11 @@
       ]
     },
     {
-      "date": "lunedì 3 Agosto 2026",
-      "date_iso": "2026-08-03",
+      "date": "martedì 11 Agosto 2026",
+      "date_iso": "2026-08-11",
       "films": [
         {
-          "title": "Vittorio de sica – la vita in scena",
+          "title": "Santiago – un cammino per ricominciare (compostelle)",
           "showtimes": [
             "21:00"
           ],
@@ -105,25 +120,11 @@
       ]
     },
     {
-      "date": "martedì 4 Agosto 2026",
-      "date_iso": "2026-08-04",
+      "date": "mercoledì 12 Agosto 2026",
+      "date_iso": "2026-08-12",
       "films": [
         {
-          "title": "L’hangar rosso",
-          "showtimes": [
-            "21:00"
-          ],
-          "original_version": true,
-          "outdoor_screening": true
-        }
-      ]
-    },
-    {
-      "date": "mercoledì 5 Agosto 2026",
-      "date_iso": "2026-08-05",
-      "films": [
-        {
-          "title": "The doors 4k (ried. 2026)",
+          "title": "Alice nelle citta (alice in den stadten) – v.o. 1973",
           "showtimes": [
             "21:00"
           ],
