@@ -1,22 +1,21 @@
 {
   "cinema": "Cinema Odeon Vicenza",
-  "updated_at": "13-08-2026 07:27 UTC",
+  "updated_at": "20-08-2026 06:45 UTC",
   "days": [
     {
-      "date": "giovedì 13 Agosto 2026",
-      "date_iso": "2026-08-13",
+      "date": "giovedì 20 Agosto 2026",
+      "date_iso": "2026-08-20",
       "films": [
         {
           "title": "Odissea – odeon",
           "showtimes": [
-            "17:30",
-            "20:30"
+            "17:30"
           ],
           "original_version": true,
           "outdoor_screening": false
         },
         {
-          "title": "Hamnet – nel nome del figlio",
+          "title": "La petite cuisine de mehdi",
           "showtimes": [
             "21:00"
           ],
@@ -26,30 +25,8 @@
       ]
     },
     {
-      "date": "venerdì 14 Agosto 2026",
-      "date_iso": "2026-08-14",
-      "films": [
-        {
-          "title": "Odissea – odeon",
-          "showtimes": [
-            "20:30"
-          ],
-          "original_version": true,
-          "outdoor_screening": false
-        },
-        {
-          "title": "Michael",
-          "showtimes": [
-            "21:00"
-          ],
-          "original_version": true,
-          "outdoor_screening": true
-        }
-      ]
-    },
-    {
-      "date": "sabato 15 Agosto 2026",
-      "date_iso": "2026-08-15",
+      "date": "venerdì 21 Agosto 2026",
+      "date_iso": "2026-08-21",
       "films": [
         {
           "title": "Odissea – odeon",
@@ -60,7 +37,7 @@
           "outdoor_screening": false
         },
         {
-          "title": "La vita va cosi’",
+          "title": "Disclosure day",
           "showtimes": [
             "21:00"
           ],
@@ -70,8 +47,30 @@
       ]
     },
     {
-      "date": "domenica 16 Agosto 2026",
-      "date_iso": "2026-08-16",
+      "date": "sabato 22 Agosto 2026",
+      "date_iso": "2026-08-22",
+      "films": [
+        {
+          "title": "Odissea – odeon",
+          "showtimes": [
+            "17:30"
+          ],
+          "original_version": true,
+          "outdoor_screening": false
+        },
+        {
+          "title": "Pecore sotto copertura (the sheep detectives)",
+          "showtimes": [
+            "21:00"
+          ],
+          "original_version": true,
+          "outdoor_screening": true
+        }
+      ]
+    },
+    {
+      "date": "domenica 23 Agosto 2026",
+      "date_iso": "2026-08-23",
       "films": [
         {
           "title": "Odissea – odeon",
@@ -82,7 +81,21 @@
           "outdoor_screening": false
         },
         {
-          "title": "Il maestro",
+          "title": "Le citta’ di pianura",
+          "showtimes": [
+            "21:01"
+          ],
+          "original_version": true,
+          "outdoor_screening": true
+        }
+      ]
+    },
+    {
+      "date": "lunedì 24 Agosto 2026",
+      "date_iso": "2026-08-24",
+      "films": [
+        {
+          "title": "Epic: elvis presley in concert – v. o.",
           "showtimes": [
             "21:00"
           ],
@@ -92,11 +105,11 @@
       ]
     },
     {
-      "date": "lunedì 17 Agosto 2026",
-      "date_iso": "2026-08-17",
+      "date": "martedì 25 Agosto 2026",
+      "date_iso": "2026-08-25",
       "films": [
         {
-          "title": "Fiume o morte!",
+          "title": "Bugonia",
           "showtimes": [
             "21:00"
           ],
@@ -106,25 +119,11 @@
       ]
     },
     {
-      "date": "martedì 18 Agosto 2026",
-      "date_iso": "2026-08-18",
+      "date": "mercoledì 26 Agosto 2026",
+      "date_iso": "2026-08-26",
       "films": [
         {
-          "title": "La vendetta perfetta – bear country",
-          "showtimes": [
-            "21:00"
-          ],
-          "original_version": true,
-          "outdoor_screening": true
-        }
-      ]
-    },
-    {
-      "date": "mercoledì 19 Agosto 2026",
-      "date_iso": "2026-08-19",
-      "films": [
-        {
-          "title": "Principessa mononoke 4k (ried. 2026)",
+          "title": "Harry potter e la pietra filosofale – 25mo anniversario",
           "showtimes": [
             "21:00"
           ],
