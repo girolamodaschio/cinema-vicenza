@@ -1,21 +1,21 @@
 {
   "cinema": "Cinema Odeon Vicenza",
-  "updated_at": "20-08-2026 06:45 UTC",
+  "updated_at": "27-08-2026 17:23 UTC",
   "days": [
     {
-      "date": "giovedì 20 Agosto 2026",
-      "date_iso": "2026-08-20",
+      "date": "giovedì 27 Agosto 2026",
+      "date_iso": "2026-08-27",
       "films": [
         {
-          "title": "Odissea – odeon",
+          "title": "Harry potter e la pietra filosofale – 25mo anniversario – odeon",
           "showtimes": [
-            "17:30"
+            "20:30"
           ],
           "original_version": true,
-          "outdoor_screening": false
+          "outdoor_screening": true
         },
         {
-          "title": "La petite cuisine de mehdi",
+          "title": "Tony – diario di un giovane cuoco",
           "showtimes": [
             "21:00"
           ],
@@ -25,11 +25,19 @@
       ]
     },
     {
-      "date": "venerdì 21 Agosto 2026",
-      "date_iso": "2026-08-21",
+      "date": "venerdì 28 Agosto 2026",
+      "date_iso": "2026-08-28",
       "films": [
         {
-          "title": "Odissea – odeon",
+          "title": "Harry potter e la pietra filosofale – 25mo anniversario – odeon",
+          "showtimes": [
+            "17:30"
+          ],
+          "original_version": true,
+          "outdoor_screening": true
+        },
+        {
+          "title": "Tony – diario di un giovane cuoco",
           "showtimes": [
             "20:30"
           ],
@@ -37,7 +45,7 @@
           "outdoor_screening": false
         },
         {
-          "title": "Disclosure day",
+          "title": "Dracula – l’amore perduto (dracula: a love tale)",
           "showtimes": [
             "21:00"
           ],
@@ -47,11 +55,11 @@
       ]
     },
     {
-      "date": "sabato 22 Agosto 2026",
-      "date_iso": "2026-08-22",
+      "date": "sabato 29 Agosto 2026",
+      "date_iso": "2026-08-29",
       "films": [
         {
-          "title": "Odissea – odeon",
+          "title": "Tony – diario di un giovane cuoco",
           "showtimes": [
             "17:30"
           ],
@@ -59,7 +67,15 @@
           "outdoor_screening": false
         },
         {
-          "title": "Pecore sotto copertura (the sheep detectives)",
+          "title": "Harry potter e la pietra filosofale – 25mo anniversario – odeon",
+          "showtimes": [
+            "20:30"
+          ],
+          "original_version": true,
+          "outdoor_screening": true
+        },
+        {
+          "title": "Hen – storia di una gallina",
           "showtimes": [
             "21:00"
           ],
@@ -69,11 +85,19 @@
       ]
     },
     {
-      "date": "domenica 23 Agosto 2026",
-      "date_iso": "2026-08-23",
+      "date": "domenica 30 Agosto 2026",
+      "date_iso": "2026-08-30",
       "films": [
         {
-          "title": "Odissea – odeon",
+          "title": "Harry potter e la pietra filosofale – 25mo anniversario – odeon",
+          "showtimes": [
+            "17:30"
+          ],
+          "original_version": true,
+          "outdoor_screening": true
+        },
+        {
+          "title": "Tony – diario di un giovane cuoco",
           "showtimes": [
             "20:30"
           ],
@@ -81,21 +105,7 @@
           "outdoor_screening": false
         },
         {
-          "title": "Le citta’ di pianura",
-          "showtimes": [
-            "21:01"
-          ],
-          "original_version": true,
-          "outdoor_screening": true
-        }
-      ]
-    },
-    {
-      "date": "lunedì 24 Agosto 2026",
-      "date_iso": "2026-08-24",
-      "films": [
-        {
-          "title": "Epic: elvis presley in concert – v. o.",
+          "title": "Un anno di scuola",
           "showtimes": [
             "21:00"
           ],
@@ -105,11 +115,11 @@
       ]
     },
     {
-      "date": "martedì 25 Agosto 2026",
-      "date_iso": "2026-08-25",
+      "date": "lunedì 31 Agosto 2026",
+      "date_iso": "2026-08-31",
       "films": [
         {
-          "title": "Bugonia",
+          "title": "L’ape regina",
           "showtimes": [
             "21:00"
           ],
@@ -119,16 +129,30 @@
       ]
     },
     {
-      "date": "mercoledì 26 Agosto 2026",
-      "date_iso": "2026-08-26",
+      "date": "martedì 1 Settembre 2026",
+      "date_iso": "2026-09-01",
       "films": [
         {
-          "title": "Harry potter e la pietra filosofale – 25mo anniversario",
+          "title": "Dolomitismo: racconti verticali",
           "showtimes": [
             "21:00"
           ],
           "original_version": true,
           "outdoor_screening": true
+        }
+      ]
+    },
+    {
+      "date": "mercoledì 2 Settembre 2026",
+      "date_iso": "2026-09-02",
+      "films": [
+        {
+          "title": "Tutti gli uomini del presidente (all the president’s men)",
+          "showtimes": [
+            "21:00"
+          ],
+          "original_version": true,
+          "outdoor_screening": false
         }
       ]
     }
