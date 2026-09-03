@@ -1,41 +1,16 @@
 {
   "cinema": "Cinema Odeon Vicenza",
-  "updated_at": "27-08-2026 17:23 UTC",
+  "updated_at": "03-09-2026 10:47 UTC",
   "days": [
     {
-      "date": "giovedì 27 Agosto 2026",
-      "date_iso": "2026-08-27",
-      "films": [
-        {
-          "title": "Harry potter e la pietra filosofale – 25mo anniversario – odeon",
-          "showtimes": [
-            "20:30"
-          ],
-          "original_version": true,
-          "outdoor_screening": true
-        },
-        {
-          "title": "Tony – diario di un giovane cuoco",
-          "showtimes": [
-            "21:00"
-          ],
-          "original_version": true,
-          "outdoor_screening": true
-        }
-      ]
+      "date": "giovedì 3 Settembre 2026",
+      "date_iso": "2026-09-03",
+      "films": null
     },
     {
-      "date": "venerdì 28 Agosto 2026",
-      "date_iso": "2026-08-28",
+      "date": "venerdì 4 Settembre 2026",
+      "date_iso": "2026-09-04",
       "films": [
-        {
-          "title": "Harry potter e la pietra filosofale – 25mo anniversario – odeon",
-          "showtimes": [
-            "17:30"
-          ],
-          "original_version": true,
-          "outdoor_screening": true
-        },
         {
           "title": "Tony – diario di un giovane cuoco",
           "showtimes": [
@@ -45,7 +20,7 @@
           "outdoor_screening": false
         },
         {
-          "title": "Dracula – l’amore perduto (dracula: a love tale)",
+          "title": "No other choice – non c’È altra scelta",
           "showtimes": [
             "21:00"
           ],
@@ -55,47 +30,9 @@
       ]
     },
     {
-      "date": "sabato 29 Agosto 2026",
-      "date_iso": "2026-08-29",
+      "date": "sabato 5 Settembre 2026",
+      "date_iso": "2026-09-05",
       "films": [
-        {
-          "title": "Tony – diario di un giovane cuoco",
-          "showtimes": [
-            "17:30"
-          ],
-          "original_version": true,
-          "outdoor_screening": false
-        },
-        {
-          "title": "Harry potter e la pietra filosofale – 25mo anniversario – odeon",
-          "showtimes": [
-            "20:30"
-          ],
-          "original_version": true,
-          "outdoor_screening": true
-        },
-        {
-          "title": "Hen – storia di una gallina",
-          "showtimes": [
-            "21:00"
-          ],
-          "original_version": true,
-          "outdoor_screening": true
-        }
-      ]
-    },
-    {
-      "date": "domenica 30 Agosto 2026",
-      "date_iso": "2026-08-30",
-      "films": [
-        {
-          "title": "Harry potter e la pietra filosofale – 25mo anniversario – odeon",
-          "showtimes": [
-            "17:30"
-          ],
-          "original_version": true,
-          "outdoor_screening": true
-        },
         {
           "title": "Tony – diario di un giovane cuoco",
           "showtimes": [
@@ -105,7 +42,7 @@
           "outdoor_screening": false
         },
         {
-          "title": "Un anno di scuola",
+          "title": "Spider-man: brand new day",
           "showtimes": [
             "21:00"
           ],
@@ -115,46 +52,41 @@
       ]
     },
     {
-      "date": "lunedì 31 Agosto 2026",
-      "date_iso": "2026-08-31",
+      "date": "domenica 6 Settembre 2026",
+      "date_iso": "2026-09-06",
       "films": [
         {
-          "title": "L’ape regina",
+          "title": "Tony – diario di un giovane cuoco",
           "showtimes": [
-            "21:00"
-          ],
-          "original_version": true,
-          "outdoor_screening": true
-        }
-      ]
-    },
-    {
-      "date": "martedì 1 Settembre 2026",
-      "date_iso": "2026-09-01",
-      "films": [
-        {
-          "title": "Dolomitismo: racconti verticali",
-          "showtimes": [
-            "21:00"
-          ],
-          "original_version": true,
-          "outdoor_screening": true
-        }
-      ]
-    },
-    {
-      "date": "mercoledì 2 Settembre 2026",
-      "date_iso": "2026-09-02",
-      "films": [
-        {
-          "title": "Tutti gli uomini del presidente (all the president’s men)",
-          "showtimes": [
-            "21:00"
+            "18:00"
           ],
           "original_version": true,
           "outdoor_screening": false
+        },
+        {
+          "title": "Odissea",
+          "showtimes": [
+            "21:00"
+          ],
+          "original_version": true,
+          "outdoor_screening": true
         }
       ]
+    },
+    {
+      "date": "lunedì 7 Settembre 2026",
+      "date_iso": "2026-09-07",
+      "films": null
+    },
+    {
+      "date": "martedì 8 Settembre 2026",
+      "date_iso": "2026-09-08",
+      "films": null
+    },
+    {
+      "date": "mercoledì 9 Settembre 2026",
+      "date_iso": "2026-09-09",
+      "films": null
     }
   ]
 }
