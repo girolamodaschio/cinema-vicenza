@@ -1,92 +1,215 @@
 {
   "cinema": "Cinema Odeon Vicenza",
-  "updated_at": "03-09-2026 10:47 UTC",
+  "updated_at": "10-09-2026 10:46 UTC",
   "days": [
     {
-      "date": "giovedì 3 Settembre 2026",
-      "date_iso": "2026-09-03",
-      "films": null
-    },
-    {
-      "date": "venerdì 4 Settembre 2026",
-      "date_iso": "2026-09-04",
+      "date": "giovedì 10 Settembre 2026",
+      "date_iso": "2026-09-10",
       "films": [
         {
-          "title": "Tony – diario di un giovane cuoco",
+          "title": "The echo chamber",
           "showtimes": [
-            "20:30"
+            "16:00",
+            "18:15"
           ],
           "original_version": true,
           "outdoor_screening": false
         },
         {
-          "title": "No other choice – non c’È altra scelta",
+          "title": "Couture (coutures)",
           "showtimes": [
-            "21:00"
-          ],
-          "original_version": true,
-          "outdoor_screening": true
-        }
-      ]
-    },
-    {
-      "date": "sabato 5 Settembre 2026",
-      "date_iso": "2026-09-05",
-      "films": [
-        {
-          "title": "Tony – diario di un giovane cuoco",
-          "showtimes": [
-            "20:30"
+            "16:00"
           ],
           "original_version": true,
           "outdoor_screening": false
         },
         {
-          "title": "Spider-man: brand new day",
+          "title": "Oasis: don’t look back in anger",
           "showtimes": [
-            "21:00"
+            "18:00",
+            "20:45"
           ],
           "original_version": true,
-          "outdoor_screening": true
+          "outdoor_screening": false
         }
       ]
     },
     {
-      "date": "domenica 6 Settembre 2026",
-      "date_iso": "2026-09-06",
+      "date": "venerdì 11 Settembre 2026",
+      "date_iso": "2026-09-11",
       "films": [
         {
-          "title": "Tony – diario di un giovane cuoco",
+          "title": "The echo chamber",
+          "showtimes": [
+            "16:00",
+            "18:15",
+            "20:45"
+          ],
+          "original_version": true,
+          "outdoor_screening": false
+        },
+        {
+          "title": "Couture (coutures)",
+          "showtimes": [
+            "16:00"
+          ],
+          "original_version": true,
+          "outdoor_screening": false
+        },
+        {
+          "title": "Oasis: don’t look back in anger",
+          "showtimes": [
+            "18:00",
+            "20:30"
+          ],
+          "original_version": true,
+          "outdoor_screening": false
+        }
+      ]
+    },
+    {
+      "date": "sabato 12 Settembre 2026",
+      "date_iso": "2026-09-12",
+      "films": [
+        {
+          "title": "The echo chamber",
+          "showtimes": [
+            "16:00",
+            "20:45"
+          ],
+          "original_version": true,
+          "outdoor_screening": false
+        },
+        {
+          "title": "Oasis: don’t look back in anger",
+          "showtimes": [
+            "16:00",
+            "18:00",
+            "20:30"
+          ],
+          "original_version": true,
+          "outdoor_screening": false
+        }
+      ]
+    },
+    {
+      "date": "domenica 13 Settembre 2026",
+      "date_iso": "2026-09-13",
+      "films": [
+        {
+          "title": "The echo chamber",
+          "showtimes": [
+            "16:00",
+            "18:15",
+            "20:45"
+          ],
+          "original_version": true,
+          "outdoor_screening": false
+        },
+        {
+          "title": "Couture (coutures)",
+          "showtimes": [
+            "16:00"
+          ],
+          "original_version": true,
+          "outdoor_screening": false
+        },
+        {
+          "title": "Oasis: don’t look back in anger",
+          "showtimes": [
+            "18:00",
+            "20:30"
+          ],
+          "original_version": true,
+          "outdoor_screening": false
+        }
+      ]
+    },
+    {
+      "date": "lunedì 14 Settembre 2026",
+      "date_iso": "2026-09-14",
+      "films": [
+        {
+          "title": "The echo chamber",
+          "showtimes": [
+            "16:00"
+          ],
+          "original_version": true,
+          "outdoor_screening": false
+        },
+        {
+          "title": "Oasis: don’t look back in anger",
+          "showtimes": [
+            "16:00"
+          ],
+          "original_version": true,
+          "outdoor_screening": false
+        }
+      ]
+    },
+    {
+      "date": "martedì 15 Settembre 2026",
+      "date_iso": "2026-09-15",
+      "films": [
+        {
+          "title": "Tony – diario di un giovane cuoco – cineforum",
+          "showtimes": [
+            "16:00",
+            "18:00",
+            "20:30"
+          ],
+          "original_version": true,
+          "outdoor_screening": true
+        },
+        {
+          "title": "With hasan in gaza",
+          "showtimes": [
+            "18:15"
+          ],
+          "original_version": true,
+          "outdoor_screening": false
+        },
+        {
+          "title": "The echo chamber",
+          "showtimes": [
+            "20:30"
+          ],
+          "original_version": true,
+          "outdoor_screening": false
+        }
+      ]
+    },
+    {
+      "date": "mercoledì 16 Settembre 2026",
+      "date_iso": "2026-09-16",
+      "films": [
+        {
+          "title": "Tony – diario di un giovane cuoco – cineforum",
+          "showtimes": [
+            "16:00",
+            "18:00",
+            "20:30"
+          ],
+          "original_version": true,
+          "outdoor_screening": true
+        },
+        {
+          "title": "With hasan in gaza",
+          "showtimes": [
+            "16:00"
+          ],
+          "original_version": true,
+          "outdoor_screening": false
+        },
+        {
+          "title": "The echo chamber",
           "showtimes": [
             "18:00"
           ],
           "original_version": true,
           "outdoor_screening": false
-        },
-        {
-          "title": "Odissea",
-          "showtimes": [
-            "21:00"
-          ],
-          "original_version": true,
-          "outdoor_screening": true
         }
       ]
-    },
-    {
-      "date": "lunedì 7 Settembre 2026",
-      "date_iso": "2026-09-07",
-      "films": null
-    },
-    {
-      "date": "martedì 8 Settembre 2026",
-      "date_iso": "2026-09-08",
-      "films": null
-    },
-    {
-      "date": "mercoledì 9 Settembre 2026",
-      "date_iso": "2026-09-09",
-      "films": null
     }
   ]
 }
