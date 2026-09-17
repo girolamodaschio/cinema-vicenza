@@ -1,32 +1,40 @@
 {
   "cinema": "Cinema Odeon Vicenza",
-  "updated_at": "10-09-2026 10:46 UTC",
+  "updated_at": "17-09-2026 11:06 UTC",
   "days": [
     {
-      "date": "giovedì 10 Settembre 2026",
-      "date_iso": "2026-09-10",
+      "date": "giovedì 17 Settembre 2026",
+      "date_iso": "2026-09-17",
       "films": [
+        {
+          "title": "Tony – diario di un giovane cuoco – cineforum",
+          "showtimes": [
+            "16:00",
+            "18:00"
+          ],
+          "original_version": true,
+          "outdoor_screening": false
+        },
+        {
+          "title": "With hasan in gaza",
+          "showtimes": [
+            "16:15"
+          ],
+          "original_version": true,
+          "outdoor_screening": false
+        },
+        {
+          "title": "The invite – il piacere È tutto nostro",
+          "showtimes": [
+            "18:15",
+            "20:30"
+          ],
+          "original_version": true,
+          "outdoor_screening": false
+        },
         {
           "title": "The echo chamber",
           "showtimes": [
-            "16:00",
-            "18:15"
-          ],
-          "original_version": true,
-          "outdoor_screening": false
-        },
-        {
-          "title": "Couture (coutures)",
-          "showtimes": [
-            "16:00"
-          ],
-          "original_version": true,
-          "outdoor_screening": false
-        },
-        {
-          "title": "Oasis: don’t look back in anger",
-          "showtimes": [
-            "18:00",
             "20:45"
           ],
           "original_version": true,
@@ -35,9 +43,45 @@
       ]
     },
     {
-      "date": "venerdì 11 Settembre 2026",
-      "date_iso": "2026-09-11",
+      "date": "venerdì 18 Settembre 2026",
+      "date_iso": "2026-09-18",
       "films": [
+        {
+          "title": "The invite – il piacere È tutto nostro",
+          "showtimes": [
+            "16:00",
+            "18:00",
+            "20:45"
+          ],
+          "original_version": true,
+          "outdoor_screening": false
+        },
+        {
+          "title": "The echo chamber",
+          "showtimes": [
+            "16:00",
+            "18:15",
+            "20:30"
+          ],
+          "original_version": true,
+          "outdoor_screening": false
+        }
+      ]
+    },
+    {
+      "date": "sabato 19 Settembre 2026",
+      "date_iso": "2026-09-19",
+      "films": [
+        {
+          "title": "The invite – il piacere È tutto nostro",
+          "showtimes": [
+            "16:00",
+            "18:00",
+            "20:30"
+          ],
+          "original_version": true,
+          "outdoor_screening": false
+        },
         {
           "title": "The echo chamber",
           "showtimes": [
@@ -47,41 +91,15 @@
           ],
           "original_version": true,
           "outdoor_screening": false
-        },
-        {
-          "title": "Couture (coutures)",
-          "showtimes": [
-            "16:00"
-          ],
-          "original_version": true,
-          "outdoor_screening": false
-        },
-        {
-          "title": "Oasis: don’t look back in anger",
-          "showtimes": [
-            "18:00",
-            "20:30"
-          ],
-          "original_version": true,
-          "outdoor_screening": false
         }
       ]
     },
     {
-      "date": "sabato 12 Settembre 2026",
-      "date_iso": "2026-09-12",
+      "date": "domenica 20 Settembre 2026",
+      "date_iso": "2026-09-20",
       "films": [
         {
-          "title": "The echo chamber",
-          "showtimes": [
-            "16:00",
-            "20:45"
-          ],
-          "original_version": true,
-          "outdoor_screening": false
-        },
-        {
-          "title": "Oasis: don’t look back in anger",
+          "title": "The invite – il piacere È tutto nostro",
           "showtimes": [
             "16:00",
             "18:00",
@@ -89,13 +107,7 @@
           ],
           "original_version": true,
           "outdoor_screening": false
-        }
-      ]
-    },
-    {
-      "date": "domenica 13 Settembre 2026",
-      "date_iso": "2026-09-13",
-      "films": [
+        },
         {
           "title": "The echo chamber",
           "showtimes": [
@@ -105,106 +117,121 @@
           ],
           "original_version": true,
           "outdoor_screening": false
-        },
-        {
-          "title": "Couture (coutures)",
-          "showtimes": [
-            "16:00"
-          ],
-          "original_version": true,
-          "outdoor_screening": false
-        },
-        {
-          "title": "Oasis: don’t look back in anger",
-          "showtimes": [
-            "18:00",
-            "20:30"
-          ],
-          "original_version": true,
-          "outdoor_screening": false
         }
       ]
     },
     {
-      "date": "lunedì 14 Settembre 2026",
-      "date_iso": "2026-09-14",
+      "date": "lunedì 21 Settembre 2026",
+      "date_iso": "2026-09-21",
       "films": [
-        {
-          "title": "The echo chamber",
-          "showtimes": [
-            "16:00"
-          ],
-          "original_version": true,
-          "outdoor_screening": false
-        },
-        {
-          "title": "Oasis: don’t look back in anger",
-          "showtimes": [
-            "16:00"
-          ],
-          "original_version": true,
-          "outdoor_screening": false
-        }
-      ]
-    },
-    {
-      "date": "martedì 15 Settembre 2026",
-      "date_iso": "2026-09-15",
-      "films": [
-        {
-          "title": "Tony – diario di un giovane cuoco – cineforum",
-          "showtimes": [
-            "16:00",
-            "18:00",
-            "20:30"
-          ],
-          "original_version": true,
-          "outdoor_screening": true
-        },
-        {
-          "title": "With hasan in gaza",
-          "showtimes": [
-            "18:15"
-          ],
-          "original_version": true,
-          "outdoor_screening": false
-        },
-        {
-          "title": "The echo chamber",
-          "showtimes": [
-            "20:30"
-          ],
-          "original_version": true,
-          "outdoor_screening": false
-        }
-      ]
-    },
-    {
-      "date": "mercoledì 16 Settembre 2026",
-      "date_iso": "2026-09-16",
-      "films": [
-        {
-          "title": "Tony – diario di un giovane cuoco – cineforum",
-          "showtimes": [
-            "16:00",
-            "18:00",
-            "20:30"
-          ],
-          "original_version": true,
-          "outdoor_screening": true
-        },
-        {
-          "title": "With hasan in gaza",
-          "showtimes": [
-            "16:00"
-          ],
-          "original_version": true,
-          "outdoor_screening": false
-        },
         {
           "title": "The echo chamber",
           "showtimes": [
             "18:00"
+          ],
+          "original_version": true,
+          "outdoor_screening": false
+        },
+        {
+          "title": "M – il mostro di dusseldorf (m) (ed. rest.)",
+          "showtimes": [
+            "18:15"
+          ],
+          "original_version": true,
+          "outdoor_screening": false
+        },
+        {
+          "title": "A war on women",
+          "showtimes": [
+            "20:30"
+          ],
+          "original_version": true,
+          "outdoor_screening": false
+        },
+        {
+          "title": "The invite – il piacere È tutto nostro",
+          "showtimes": [
+            "20:45"
+          ],
+          "original_version": true,
+          "outdoor_screening": false
+        }
+      ]
+    },
+    {
+      "date": "martedì 22 Settembre 2026",
+      "date_iso": "2026-09-22",
+      "films": [
+        {
+          "title": "Palestina 36 – quando tutto ebbe inizio",
+          "showtimes": [
+            "15:30",
+            "18:00",
+            "20:30"
+          ],
+          "original_version": true,
+          "outdoor_screening": false
+        },
+        {
+          "title": "M – il mostro di dusseldorf (m) (ed. rest.)",
+          "showtimes": [
+            "16:00"
+          ],
+          "original_version": true,
+          "outdoor_screening": false
+        },
+        {
+          "title": "The echo chamber",
+          "showtimes": [
+            "18:15"
+          ],
+          "original_version": true,
+          "outdoor_screening": false
+        },
+        {
+          "title": "The invite – il piacere È tutto nostro",
+          "showtimes": [
+            "20:30"
+          ],
+          "original_version": true,
+          "outdoor_screening": false
+        }
+      ]
+    },
+    {
+      "date": "mercoledì 23 Settembre 2026",
+      "date_iso": "2026-09-23",
+      "films": [
+        {
+          "title": "Palestina 36 – quando tutto ebbe inizio",
+          "showtimes": [
+            "15:30",
+            "18:00",
+            "20:30"
+          ],
+          "original_version": true,
+          "outdoor_screening": false
+        },
+        {
+          "title": "The echo chamber",
+          "showtimes": [
+            "16:00"
+          ],
+          "original_version": true,
+          "outdoor_screening": false
+        },
+        {
+          "title": "M – il mostro di dusseldorf (m) (ed. rest.)",
+          "showtimes": [
+            "18:15"
+          ],
+          "original_version": true,
+          "outdoor_screening": false
+        },
+        {
+          "title": "The invite – il piacere È tutto nostro",
+          "showtimes": [
+            "20:30"
           ],
           "original_version": true,
           "outdoor_screening": false
