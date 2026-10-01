@@ -1,22 +1,22 @@
 {
   "cinema": "Cinema Odeon Vicenza",
-  "updated_at": "24-09-2026 11:13 UTC",
+  "updated_at": "01-10-2026 12:34 UTC",
   "days": [
     {
-      "date": "giovedì 24 Settembre 2026",
-      "date_iso": "2026-09-24",
+      "date": "giovedì 1 Ottobre 2026",
+      "date_iso": "2026-10-01",
       "films": [
         {
-          "title": "Palestina 36 – quando tutto ebbe inizio",
+          "title": "Silent friend",
           "showtimes": [
-            "15:30",
+            "15:15",
             "18:00"
           ],
           "original_version": true,
           "outdoor_screening": false
         },
         {
-          "title": "The invite – il piacere È tutto nostro",
+          "title": "Una storia",
           "showtimes": [
             "16:15"
           ],
@@ -24,143 +24,18 @@
           "outdoor_screening": false
         },
         {
-          "title": "Una storia",
-          "showtimes": [
-            "18:15",
-            "20:30"
-          ],
-          "original_version": true,
-          "outdoor_screening": false
-        },
-        {
-          "title": "Nessun dolore",
-          "showtimes": [
-            "20:45"
-          ],
-          "original_version": true,
-          "outdoor_screening": false
-        }
-      ]
-    },
-    {
-      "date": "venerdì 25 Settembre 2026",
-      "date_iso": "2026-09-25",
-      "films": [
-        {
-          "title": "Nessun dolore",
-          "showtimes": [
-            "16:00",
-            "18:00",
-            "20:30"
-          ],
-          "original_version": true,
-          "outdoor_screening": false
-        },
-        {
-          "title": "Una storia",
-          "showtimes": [
-            "16:15",
-            "20:45"
-          ],
-          "original_version": true,
-          "outdoor_screening": false
-        },
-        {
-          "title": "The invite – il piacere È tutto nostro",
-          "showtimes": [
-            "18:15"
-          ],
-          "original_version": true,
-          "outdoor_screening": false
-        }
-      ]
-    },
-    {
-      "date": "sabato 26 Settembre 2026",
-      "date_iso": "2026-09-26",
-      "films": [
-        {
-          "title": "Nessun dolore",
-          "showtimes": [
-            "16:00",
-            "18:00",
-            "20:30"
-          ],
-          "original_version": true,
-          "outdoor_screening": false
-        },
-        {
-          "title": "Una storia",
-          "showtimes": [
-            "16:30",
-            "20:45"
-          ],
-          "original_version": true,
-          "outdoor_screening": false
-        },
-        {
-          "title": "The invite – il piacere È tutto nostro",
-          "showtimes": [
-            "18:30"
-          ],
-          "original_version": true,
-          "outdoor_screening": false
-        }
-      ]
-    },
-    {
-      "date": "domenica 27 Settembre 2026",
-      "date_iso": "2026-09-27",
-      "films": [
-        {
-          "title": "Nessun dolore",
-          "showtimes": [
-            "16:00",
-            "18:00",
-            "20:30"
-          ],
-          "original_version": true,
-          "outdoor_screening": false
-        },
-        {
-          "title": "Una storia",
-          "showtimes": [
-            "16:15",
-            "18:15"
-          ],
-          "original_version": true,
-          "outdoor_screening": false
-        },
-        {
-          "title": "The invite – il piacere È tutto nostro",
-          "showtimes": [
-            "20:45"
-          ],
-          "original_version": true,
-          "outdoor_screening": false
-        }
-      ]
-    },
-    {
-      "date": "lunedì 28 Settembre 2026",
-      "date_iso": "2026-09-28",
-      "films": [
-        {
-          "title": "Una storia",
-          "showtimes": [
-            "16:00",
-            "16:30"
-          ],
-          "original_version": true,
-          "outdoor_screening": false
-        },
-        {
           "title": "Naza",
           "showtimes": [
-            "16:30",
-            "18:00",
-            "20:45",
-            "21:45"
+            "18:15",
+            "19:40"
+          ],
+          "original_version": true,
+          "outdoor_screening": false
+        },
+        {
+          "title": "Digger",
+          "showtimes": [
+            "20:30"
           ],
           "original_version": true,
           "outdoor_screening": false
@@ -168,15 +43,7 @@
         {
           "title": "Nessun dolore",
           "showtimes": [
-            "18:30"
-          ],
-          "original_version": true,
-          "outdoor_screening": false
-        },
-        {
-          "title": "Una storia – evento",
-          "showtimes": [
-            "19:45"
+            "21:00"
           ],
           "original_version": true,
           "outdoor_screening": false
@@ -184,15 +51,13 @@
       ]
     },
     {
-      "date": "martedì 29 Settembre 2026",
-      "date_iso": "2026-09-29",
+      "date": "venerdì 2 Ottobre 2026",
+      "date_iso": "2026-10-02",
       "films": [
         {
-          "title": "Silent friend",
+          "title": "Una storia",
           "showtimes": [
-            "15:15",
-            "18:00",
-            "20:45"
+            "15:15"
           ],
           "original_version": true,
           "outdoor_screening": false
@@ -206,9 +71,25 @@
           "outdoor_screening": false
         },
         {
+          "title": "Digger",
+          "showtimes": [
+            "17:15",
+            "21:00"
+          ],
+          "original_version": true,
+          "outdoor_screening": false
+        },
+        {
+          "title": "Dio ride – evento",
+          "showtimes": [
+            "18:30"
+          ],
+          "original_version": true,
+          "outdoor_screening": false
+        },
+        {
           "title": "Naza",
           "showtimes": [
-            "18:00",
             "19:30",
             "21:00"
           ],
@@ -218,31 +99,24 @@
       ]
     },
     {
-      "date": "mercoledì 30 Settembre 2026",
-      "date_iso": "2026-09-30",
+      "date": "sabato 3 Ottobre 2026",
+      "date_iso": "2026-10-03",
       "films": [
-        {
-          "title": "Una storia",
-          "showtimes": [
-            "15:15"
-          ],
-          "original_version": true,
-          "outdoor_screening": false
-        },
-        {
-          "title": "Silent friend",
-          "showtimes": [
-            "15:15",
-            "18:00",
-            "20:45"
-          ],
-          "original_version": true,
-          "outdoor_screening": false
-        },
         {
           "title": "Nessun dolore",
           "showtimes": [
-            "17:15"
+            "15:30",
+            "18:30",
+            "20:40"
+          ],
+          "original_version": true,
+          "outdoor_screening": false
+        },
+        {
+          "title": "Digger",
+          "showtimes": [
+            "16:00",
+            "20:45"
           ],
           "original_version": true,
           "outdoor_screening": false
@@ -250,9 +124,137 @@
         {
           "title": "Naza",
           "showtimes": [
-            "19:00",
-            "20:30",
-            "22:00"
+            "17:15"
+          ],
+          "original_version": true,
+          "outdoor_screening": false
+        },
+        {
+          "title": "Una storia",
+          "showtimes": [
+            "18:45"
+          ],
+          "original_version": true,
+          "outdoor_screening": false
+        }
+      ]
+    },
+    {
+      "date": "domenica 4 Ottobre 2026",
+      "date_iso": "2026-10-04",
+      "films": [
+        {
+          "title": "Nessun dolore",
+          "showtimes": [
+            "16:00",
+            "18:30"
+          ],
+          "original_version": true,
+          "outdoor_screening": false
+        },
+        {
+          "title": "Digger",
+          "showtimes": [
+            "16:15",
+            "18:00",
+            "20:30"
+          ],
+          "original_version": true,
+          "outdoor_screening": false
+        },
+        {
+          "title": "Una storia",
+          "showtimes": [
+            "20:45"
+          ],
+          "original_version": true,
+          "outdoor_screening": false
+        }
+      ]
+    },
+    {
+      "date": "lunedì 5 Ottobre 2026",
+      "date_iso": "2026-10-05",
+      "films": [
+        {
+          "title": "Naza",
+          "showtimes": [
+            "18:00",
+            "19:00"
+          ],
+          "original_version": true,
+          "outdoor_screening": false
+        },
+        {
+          "title": "Nessun dolore – evento",
+          "showtimes": [
+            "19:30"
+          ],
+          "original_version": true,
+          "outdoor_screening": false
+        },
+        {
+          "title": "Digger",
+          "showtimes": [
+            "21:15"
+          ],
+          "original_version": true,
+          "outdoor_screening": false
+        }
+      ]
+    },
+    {
+      "date": "martedì 6 Ottobre 2026",
+      "date_iso": "2026-10-06",
+      "films": [
+        {
+          "title": "Digger",
+          "showtimes": [
+            "10:30",
+            "20:45"
+          ],
+          "original_version": true,
+          "outdoor_screening": false
+        },
+        {
+          "title": "The invite – cineforum",
+          "showtimes": [
+            "16:00",
+            "18:00",
+            "20:30"
+          ],
+          "original_version": true,
+          "outdoor_screening": false
+        },
+        {
+          "title": "Naza",
+          "showtimes": [
+            "18:30"
+          ],
+          "original_version": true,
+          "outdoor_screening": false
+        }
+      ]
+    },
+    {
+      "date": "mercoledì 7 Ottobre 2026",
+      "date_iso": "2026-10-07",
+      "films": [
+        {
+          "title": "The invite – cineforum",
+          "showtimes": [
+            "16:00",
+            "18:00",
+            "20:30"
+          ],
+          "original_version": true,
+          "outdoor_screening": false
+        },
+        {
+          "title": "Digger",
+          "showtimes": [
+            "16:15",
+            "20:45"
           ],
           "original_version": true,
           "outdoor_screening": false
