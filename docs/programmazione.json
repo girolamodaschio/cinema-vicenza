@@ -1,22 +1,71 @@
 {
   "cinema": "Cinema Odeon Vicenza",
-  "updated_at": "01-10-2026 12:34 UTC",
+  "updated_at": "08-10-2026 12:55 UTC",
   "days": [
     {
-      "date": "giovedì 1 Ottobre 2026",
-      "date_iso": "2026-10-01",
+      "date": "giovedì 8 Ottobre 2026",
+      "date_iso": "2026-10-08",
       "films": [
         {
-          "title": "Silent friend",
+          "title": "L’estranea – morning glories",
           "showtimes": [
-            "15:15",
+            "10:30"
+          ],
+          "original_version": true,
+          "outdoor_screening": false
+        },
+        {
+          "title": "The invite – cineforum",
+          "showtimes": [
+            "16:00",
             "18:00"
           ],
           "original_version": true,
           "outdoor_screening": false
         },
         {
-          "title": "Una storia",
+          "title": "Naza",
+          "showtimes": [
+            "17:00",
+            "18:30"
+          ],
+          "original_version": true,
+          "outdoor_screening": false
+        },
+        {
+          "title": "Rider – evento",
+          "showtimes": [
+            "20:00"
+          ],
+          "original_version": true,
+          "outdoor_screening": false
+        },
+        {
+          "title": "L’estranea",
+          "showtimes": [
+            "20:30"
+          ],
+          "original_version": true,
+          "outdoor_screening": false
+        }
+      ]
+    },
+    {
+      "date": "venerdì 9 Ottobre 2026",
+      "date_iso": "2026-10-09",
+      "films": [
+        {
+          "title": "L’estranea",
+          "showtimes": [
+            "16:00",
+            "18:15",
+            "20:45"
+          ],
+          "original_version": true,
+          "outdoor_screening": false
+        },
+        {
+          "title": "Digger",
           "showtimes": [
             "16:15"
           ],
@@ -26,97 +75,41 @@
         {
           "title": "Naza",
           "showtimes": [
-            "18:15",
-            "19:40"
-          ],
-          "original_version": true,
-          "outdoor_screening": false
-        },
-        {
-          "title": "Digger",
-          "showtimes": [
-            "20:30"
-          ],
-          "original_version": true,
-          "outdoor_screening": false
-        },
-        {
-          "title": "Nessun dolore",
-          "showtimes": [
-            "21:00"
-          ],
-          "original_version": true,
-          "outdoor_screening": false
-        }
-      ]
-    },
-    {
-      "date": "venerdì 2 Ottobre 2026",
-      "date_iso": "2026-10-02",
-      "films": [
-        {
-          "title": "Una storia",
-          "showtimes": [
-            "15:15"
-          ],
-          "original_version": true,
-          "outdoor_screening": false
-        },
-        {
-          "title": "Nessun dolore",
-          "showtimes": [
-            "16:00"
-          ],
-          "original_version": true,
-          "outdoor_screening": false
-        },
-        {
-          "title": "Digger",
-          "showtimes": [
-            "17:15",
-            "21:00"
-          ],
-          "original_version": true,
-          "outdoor_screening": false
-        },
-        {
-          "title": "Dio ride – evento",
-          "showtimes": [
-            "18:30"
-          ],
-          "original_version": true,
-          "outdoor_screening": false
-        },
-        {
-          "title": "Naza",
-          "showtimes": [
-            "19:30",
-            "21:00"
-          ],
-          "original_version": true,
-          "outdoor_screening": false
-        }
-      ]
-    },
-    {
-      "date": "sabato 3 Ottobre 2026",
-      "date_iso": "2026-10-03",
-      "films": [
-        {
-          "title": "Nessun dolore",
-          "showtimes": [
-            "15:30",
             "18:30",
-            "20:40"
+            "20:30",
+            "20:31"
           ],
           "original_version": true,
           "outdoor_screening": false
         },
         {
-          "title": "Digger",
+          "title": "Rider",
+          "showtimes": [
+            "22:00"
+          ],
+          "original_version": true,
+          "outdoor_screening": false
+        }
+      ]
+    },
+    {
+      "date": "sabato 10 Ottobre 2026",
+      "date_iso": "2026-10-10",
+      "films": [
+        {
+          "title": "Nessun dolore",
+          "showtimes": [
+            "15:30"
+          ],
+          "original_version": true,
+          "outdoor_screening": false
+        },
+        {
+          "title": "L’estranea",
           "showtimes": [
             "16:00",
-            "20:45"
+            "18:15",
+            "20:30"
           ],
           "original_version": true,
           "outdoor_screening": false
@@ -130,9 +123,18 @@
           "outdoor_screening": false
         },
         {
-          "title": "Una storia",
+          "title": "Digger",
           "showtimes": [
-            "18:45"
+            "19:00",
+            "21:15"
+          ],
+          "original_version": true,
+          "outdoor_screening": false
+        },
+        {
+          "title": "Rider",
+          "showtimes": [
+            "22:30"
           ],
           "original_version": true,
           "outdoor_screening": false
@@ -140,14 +142,24 @@
       ]
     },
     {
-      "date": "domenica 4 Ottobre 2026",
-      "date_iso": "2026-10-04",
+      "date": "domenica 11 Ottobre 2026",
+      "date_iso": "2026-10-11",
       "films": [
         {
-          "title": "Nessun dolore",
+          "title": "Naza",
           "showtimes": [
             "16:00",
-            "18:30"
+            "21:30"
+          ],
+          "original_version": true,
+          "outdoor_screening": false
+        },
+        {
+          "title": "L’estranea",
+          "showtimes": [
+            "16:15",
+            "18:30",
+            "20:45"
           ],
           "original_version": true,
           "outdoor_screening": false
@@ -155,17 +167,15 @@
         {
           "title": "Digger",
           "showtimes": [
-            "16:15",
-            "18:00",
-            "20:30"
+            "17:30"
           ],
           "original_version": true,
           "outdoor_screening": false
         },
         {
-          "title": "Una storia",
+          "title": "Nessun dolore",
           "showtimes": [
-            "20:45"
+            "19:45"
           ],
           "original_version": true,
           "outdoor_screening": false
@@ -173,20 +183,28 @@
       ]
     },
     {
-      "date": "lunedì 5 Ottobre 2026",
-      "date_iso": "2026-10-05",
+      "date": "lunedì 12 Ottobre 2026",
+      "date_iso": "2026-10-12",
       "films": [
         {
           "title": "Naza",
           "showtimes": [
-            "18:00",
-            "19:00"
+            "18:00"
           ],
           "original_version": true,
           "outdoor_screening": false
         },
         {
-          "title": "Nessun dolore – evento",
+          "title": "L’estranea",
+          "showtimes": [
+            "18:15",
+            "21:00"
+          ],
+          "original_version": true,
+          "outdoor_screening": false
+        },
+        {
+          "title": "Rider",
           "showtimes": [
             "19:30"
           ],
@@ -194,9 +212,9 @@
           "outdoor_screening": false
         },
         {
-          "title": "Digger",
+          "title": "L’infernale quinlan (touch of evil) (director’s cut)",
           "showtimes": [
-            "21:15"
+            "20:30"
           ],
           "original_version": true,
           "outdoor_screening": false
@@ -204,20 +222,19 @@
       ]
     },
     {
-      "date": "martedì 6 Ottobre 2026",
-      "date_iso": "2026-10-06",
+      "date": "martedì 13 Ottobre 2026",
+      "date_iso": "2026-10-13",
       "films": [
         {
-          "title": "Digger",
+          "title": "L’infernale quinlan – morning glories",
           "showtimes": [
-            "10:30",
-            "20:45"
+            "10:30"
           ],
           "original_version": true,
           "outdoor_screening": false
         },
         {
-          "title": "The invite – cineforum",
+          "title": "I figli della scimmia",
           "showtimes": [
             "16:00",
             "18:00",
@@ -227,33 +244,65 @@
           "outdoor_screening": false
         },
         {
-          "title": "Naza",
+          "title": "L’infernale quinlan (touch of evil) (director’s cut)",
+          "showtimes": [
+            "16:15"
+          ],
+          "original_version": true,
+          "outdoor_screening": false
+        },
+        {
+          "title": "Per silenzio e vento",
+          "showtimes": [
+            "18:30"
+          ],
+          "original_version": true,
+          "outdoor_screening": true
+        },
+        {
+          "title": "L’estranea",
+          "showtimes": [
+            "18:30",
+            "20:45"
+          ],
+          "original_version": true,
+          "outdoor_screening": false
+        }
+      ]
+    },
+    {
+      "date": "mercoledì 14 Ottobre 2026",
+      "date_iso": "2026-10-14",
+      "films": [
+        {
+          "title": "I figli della scimmia",
+          "showtimes": [
+            "16:00",
+            "18:00",
+            "20:30"
+          ],
+          "original_version": true,
+          "outdoor_screening": false
+        },
+        {
+          "title": "Digger",
+          "showtimes": [
+            "16:15"
+          ],
+          "original_version": true,
+          "outdoor_screening": false
+        },
+        {
+          "title": "L’infernale quinlan (touch of evil) (director’s cut)",
           "showtimes": [
             "18:30"
           ],
           "original_version": true,
           "outdoor_screening": false
-        }
-      ]
-    },
-    {
-      "date": "mercoledì 7 Ottobre 2026",
-      "date_iso": "2026-10-07",
-      "films": [
-        {
-          "title": "The invite – cineforum",
-          "showtimes": [
-            "16:00",
-            "18:00",
-            "20:30"
-          ],
-          "original_version": true,
-          "outdoor_screening": false
         },
         {
-          "title": "Digger",
+          "title": "L’estranea",
           "showtimes": [
-            "16:15",
             "20:45"
           ],
           "original_version": true,
